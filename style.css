@@ -10,7 +10,7 @@ body {
 .banner {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  obdisplay: block;
 }
 
 /* タイトル */
