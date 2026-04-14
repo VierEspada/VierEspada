@@ -9,7 +9,7 @@ body {
 /* 上のバナー画像 */
 .banner {
   width: 100%;
-  height: auto;      /* ←これが重要 */
+  height: auto;      
   display: block;
 }
 
