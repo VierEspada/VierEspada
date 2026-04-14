@@ -9,8 +9,8 @@ body {
 /* 上のバナー画像 */
 .banner {
   width: 100%;
-  height: auto;      
-  display: block;
+  height: 250px;
+  object-fit: cover;
 }
 
 h1 {
