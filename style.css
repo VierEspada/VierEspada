@@ -6,12 +6,7 @@ body {
   text-align: center;
 }
 
-/* バナー */
-.banner {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+
 
 /* タイトル（ロゴ風） */
 h1 {
@@ -71,4 +66,11 @@ header p {
     inset 0 0 20px rgba(0, 204, 255, 0.8);
 
   transform: scale(1.05);
+}
+
+/* バナー */
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
 }
