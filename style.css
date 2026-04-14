@@ -116,12 +116,7 @@ header p {
   transform: scale(1.05);
 }
 
-/* 最後のボタンを中央に */
-.hud-btn:last-child {
-  grid-column: span 2;
-  justify-self: center;
-  width: 50%;
-}
+
 
 /* 少しズラしてHUD感 */
 .hud-btn:nth-child(odd) {
