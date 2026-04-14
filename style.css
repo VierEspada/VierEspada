@@ -6,44 +6,49 @@ body {
   text-align: center;
 }
 
+/* バナー */
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.7;
+}
 
-
-/* タイトル（ロゴ風） */
+/* タイトル */
 h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 90px;
-  margin: 20px 0;
 
   background: linear-gradient(to bottom, #00aaff, #ffffff);
   -webkit-background-clip: text;
   color: transparent;
 
-  text-shadow: 0 0 15px rgba(0, 150, 255, 0.8);
+  text-shadow: 0 0 20px rgba(0, 150, 255, 1);
 }
 
-/* サブタイトル */
-header p {
-  color: #00ccff;
+/* HUDコンテナ */
+.hud {
+  margin-top: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* HUDボタン */
+.hud-btn {
+  width: 300px;
+  padding: 15px;
+
+  font-size: 20px;
   letter-spacing: 2px;
-  margin-top: -10px;
-}
-
-/* ボタン配置 */
-.menu {
-  margin-top: 30px;
-}
-
-/* SAO風ボタン */
-.sao-btn {
-  display: inline-block;
-  padding: 20px 50px;
-  font-size: 24px;
 
   color: #00ccff;
   text-decoration: none;
 
   border: 2px solid #00ccff;
-  border-radius: 5px;
+  border-radius: 3px;
 
   background: rgba(0, 0, 0, 0.6);
 
@@ -51,13 +56,33 @@ header p {
     0 0 10px #00ccff,
     inset 0 0 10px rgba(0, 204, 255, 0.5);
 
-  text-shadow: 0 0 10px #00ccff;
+  position: relative;
+  overflow: hidden;
 
   transition: 0.3s;
 }
 
-/* ホバー（発光強化） */
-.sao-btn:hover {
+/* 上下ライン（SAOっぽい） */
+.hud-btn::before,
+.hud-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #00ccff;
+  left: 0;
+}
+
+.hud-btn::before {
+  top: 0;
+}
+
+.hud-btn::after {
+  bottom: 0;
+}
+
+/* ホバー */
+.hud-btn:hover {
   background: rgba(0, 204, 255, 0.2);
 
   box-shadow: 
@@ -66,11 +91,4 @@ header p {
     inset 0 0 20px rgba(0, 204, 255, 0.8);
 
   transform: scale(1.05);
-}
-
-/* バナー */
-.banner {
-  width: 100%;
-  height: auto;
-  display: block;
 }
