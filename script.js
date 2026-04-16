@@ -30,7 +30,6 @@ const data = {
     icon: "images/squad3.png"
   },
   squad4: {
-    squad4: {
     name: "脱兎らび",
     role: "♣隊エース",
     desc: "縁の下の力持ち隊",
@@ -38,32 +37,20 @@ const data = {
   }
 };
 
-function showDetail(key) {
+function showDetail(key, el) {
   document.getElementById("name").innerText = data[key].name;
   document.getElementById("role").innerText = data[key].role;
   document.getElementById("desc").innerText = data[key].desc;
-
   document.getElementById("icon").src = data[key].icon;
 
   document.getElementById("detailPanel").classList.add("active");
 
-  // 選択中カードの発光
   document.querySelectorAll(".card").forEach(c => {
     c.classList.remove("active-card");
   });
 
-  event.target.classList.add("active-card");
+  el.classList.add("active-card");
 }
-
-function closePanel() {
-  document.getElementById("detailPanel").classList.remove("active");
-
-  document.querySelectorAll(".card").forEach(c => {
-    c.classList.remove("active-card");
-  });
-}
-
-
 
 
 
