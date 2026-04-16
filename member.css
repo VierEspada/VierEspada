@@ -1,4 +1,3 @@
-/* 全体 */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -7,7 +6,6 @@ body {
   overflow-x: hidden;
 }
 
-/* タイトル */
 h1 {
   text-align: center;
   margin-top: 20px;
@@ -16,14 +14,11 @@ h1 {
   letter-spacing: 2px;
 }
 
-/* レイアウト */
 .container {
   display: flex;
 }
 
-/* =========================
-   左：メニュー
-========================= */
+/* 左メニュー */
 .member-list {
   width: 40%;
   display: flex;
@@ -41,18 +36,16 @@ h1 {
   background: linear-gradient(135deg, #38bdf8, #8b5cf6);
   color: white;
 
-  /* 初期状態（アニメ用） */
   opacity: 0;
   transform: translateX(-50px);
-
-  /* アニメーション */
   animation: slideFade 0.6s ease forwards;
 
   box-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
   transition: 0.3s;
+
+  border-left: 4px solid #22d3ee;
 }
 
-/* 順番に表示 */
 .card:nth-child(1) { animation-delay: 0.1s; }
 .card:nth-child(2) { animation-delay: 0.2s; }
 .card:nth-child(3) { animation-delay: 0.3s; }
@@ -60,24 +53,16 @@ h1 {
 .card:nth-child(5) { animation-delay: 0.5s; }
 .card:nth-child(6) { animation-delay: 0.6s; }
 
-/* ホバー */
 .card:hover {
   transform: translateX(10px) scale(1.03);
   box-shadow: 0 0 25px #8b5cf6;
 }
 
-/* 左ライン（ゲーム感） */
-.card {
-  border-left: 4px solid #22d3ee;
-}
-
-/* =========================
-   右：詳細パネル
-========================= */
+/* 右パネル */
 .detail-panel {
   position: fixed;
   top: 0;
-  right: -400px; /* 最初は隠す */
+  right: -400px;
   width: 400px;
   height: 100%;
 
@@ -87,14 +72,26 @@ h1 {
   padding: 30px;
 
   transition: 0.4s ease;
-
   backdrop-filter: blur(10px);
 }
 
-/* 開いた状態 */
 .detail-panel.active {
   right: 0;
   box-shadow: -10px 0 30px rgba(56, 189, 248, 0.5);
+}
+
+/* 画像 */
+.icon {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+
+  border-radius: 10px;
+  border: 2px solid #38bdf8;
+
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.7);
+
+  margin-bottom: 15px;
 }
 
 /* テキスト */
@@ -114,7 +111,7 @@ h1 {
   line-height: 1.6;
 }
 
-/* 閉じるボタン */
+/* ボタン */
 button {
   margin-top: 20px;
   padding: 10px 15px;
@@ -132,17 +129,10 @@ button:hover {
   box-shadow: 0 0 15px #38bdf8;
 }
 
-/* =========================
-   アニメーション
-========================= */
+/* アニメーション */
 @keyframes slideFade {
   to {
     opacity: 1;
     transform: translateX(0);
   }
-}
-/* 選択中カード */
-.active-card {
-  box-shadow: 0 0 30px #38bdf8 !important;
-  transform: translateX(15px) scale(1.05);
 }
