@@ -8,7 +8,7 @@
 <body>
 
 <h1>Vier Espada</h1>
-
+<div class="container">
 <div class="member-list">
   <div class="card" onclick="showDetail('leader')">団長</div>
   <div class="card" onclick="showDetail('sub')">副団長</div>
@@ -17,7 +17,14 @@
   <div class="card" onclick="showDetail('squad3')">♥隊</div>
   <div class="card" onclick="showDetail('squad4')">♣隊</div>
 </div>
+ <!-- 右：詳細 -->
+  <div id="detailPanel" class="detail-panel">
+    <h2 id="name"></h2>
+    <p id="role"></p>
+    <p id="desc"></p>
+  </div>
 
+</div>
 <div id="detail" class="detail hidden">
   <h2 id="name"></h2>
   <p id="role"></p>
