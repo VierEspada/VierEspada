@@ -90,3 +90,50 @@ button:hover {
 .card:nth-child(4) { border-color: #38bdf8; } 
 .card:nth-child(5) { border-color: #ec4899; } 
 .card:nth-child(6) { border-color: #22c55e; } 
+/* 縦一列 */
+.member-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* カード */
+.card {
+  width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+  color: white;
+
+  opacity: 0;
+  transform: translateX(-50px);
+
+  animation: slideFade 0.6s ease forwards;
+}
+
+/* アニメーション */
+@keyframes slideFade {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+.card:hover {
+  transform: translateX(10px) scale(1.03);
+  box-shadow: 0 0 30px #8b5cf6;
+}
+.card {
+  border-left: 4px solid #22d3ee;
+}
