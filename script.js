@@ -1,5 +1,5 @@
 const data = {
-  leader: {
+ leader: {
     name: "雨宮＠黒い剣士",
     role: "団長",
     desc: "Vier Espada 団長"
@@ -32,16 +32,29 @@ const data = {
 };
 
 function showDetail(key) {
+  // テキスト変更
   document.getElementById("name").innerText = data[key].name;
   document.getElementById("role").innerText = data[key].role;
   document.getElementById("desc").innerText = data[key].desc;
 
+  // パネル表示
   document.getElementById("detailPanel").classList.add("active");
+
+  // 選択中カード光らせる
+  document.querySelectorAll(".card").forEach(card => {
+    card.classList.remove("active-card");
+  });
+
+  event.target.classList.add("active-card");
 }
 
-function closeDetail() {
-  document.getElementById("detail").classList.add("hidden");
-}
 function closePanel() {
   document.getElementById("detailPanel").classList.remove("active");
+
+  document.querySelectorAll(".card").forEach(card => {
+    card.classList.remove("active-card");
+  });
 }
+
+
+
