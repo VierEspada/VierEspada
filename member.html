@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Vier Espada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Vier Espada</h1>
+
+<div class="member-list">
+  <div class="card" onclick="showDetail('leader')">団長</div>
+  <div class="card" onclick="showDetail('sub')">副団長</div>
+  <div class="card" onclick="showDetail('squad1')">♠隊</div>
+  <div class="card" onclick="showDetail('squad2')">♦隊</div>
+  <div class="card" onclick="showDetail('squad3')">♥隊</div>
+  <div class="card" onclick="showDetail('squad4')">♣隊</div>
+</div>
+
+<div id="detail" class="detail hidden">
+  <h2 id="name"></h2>
+  <p id="role"></p>
+  <p id="desc"></p>
+  <button onclick="closeDetail()">閉じる</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
