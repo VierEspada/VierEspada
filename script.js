@@ -21,7 +21,7 @@ const data = {
     name: "norakumo3373",
     role: "♦隊エース",
     desc: "戦闘兼サポートに特化した隊",
-    icon: "norakumo3373.jng"
+    icon: "norakumo3373.jpg"
   },
   squad3: {
     name: "空席",
