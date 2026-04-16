@@ -199,3 +199,9 @@ button:hover {
   margin-top: 15px;
   line-height: 1.6;
 }
+.detail-panel {
+  backdrop-filter: blur(10px);
+}
+.detail-panel.active {
+  box-shadow: -10px 0 30px rgba(56, 189, 248, 0.5);
+}
