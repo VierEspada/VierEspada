@@ -35,9 +35,13 @@ function showDetail(key) {
   document.getElementById("name").innerText = data[key].name;
   document.getElementById("role").innerText = data[key].role;
   document.getElementById("desc").innerText = data[key].desc;
-  document.getElementById("detail").classList.remove("hidden");
+
+  document.getElementById("detailPanel").classList.add("active");
 }
 
 function closeDetail() {
   document.getElementById("detail").classList.add("hidden");
+}
+function closePanel() {
+  document.getElementById("detailPanel").classList.remove("active");
 }
