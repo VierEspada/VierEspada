@@ -3,7 +3,7 @@ const data = {
     name: "雨宮＠黒い剣士",
     role: "団長",
     desc: "Vier Espada 団長",
-    icon: "images/leader.png"
+    icon: "amamiya.png"
   },
   sub: {
     name: "RUSK",
